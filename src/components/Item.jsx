@@ -4,7 +4,7 @@ export default function Item({ itemObj }) {
   return (
     <li>
       <span>
-        {itemObj.quantity} {itemObj.item}
+        {itemObj.quantity} {itemObj.description}
       </span>
       <button>X</button>
     </li>

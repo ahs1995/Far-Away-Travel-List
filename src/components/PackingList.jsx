@@ -7,12 +7,12 @@ import Item from "./Item";
 //   { id: 3, description: "Charger", quantity: 1, packed: false },
 // ];
 
-export default function PackingList(props) {
+export default function PackingList({ itemsArray }) {
   return (
     <div className="list">
       <ul>
-        {props.contentArray.map((item) => {
-          return <Item itemObj={item} key={item.item} />;
+        {itemsArray.map((item) => {
+          return <Item itemObj={item} key={item.id} />;
         })}
       </ul>
     </div>

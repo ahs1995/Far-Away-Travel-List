@@ -5,19 +5,19 @@ import PackingList from "./PackingList";
 import Stats from "./Stats";
 
 function App() {
-  const [contents, setContents] = useState([]);
+  const [items, setItems] = useState([]);
 
-  function addList(newContent) {
-    setContents((prevValues) => {
-      return [...prevValues, newContent];
+  function handleAddItems(newItem) {
+    setItems((prevValues) => {
+      return [...prevValues, newItem];
     });
   }
 
   return (
     <div className="app">
       <Logo />
-      <Form onAdd={addList} />
-      <PackingList contentArray={contents} />
+      <Form onAddItems={handleAddItems} />
+      <PackingList itemsArray={items} />
       <Stats />
     </div>
   );
