@@ -7,13 +7,22 @@ import Item from "./Item";
 //   { id: 3, description: "Charger", quantity: 1, packed: false },
 // ];
 
-export default function PackingList({ itemsArray, onDeleteItem }) {
+export default function PackingList({
+  itemsArray,
+  onDeleteItem,
+  onToggleItem,
+}) {
   return (
     <div className="list">
       <ul>
         {itemsArray.map((item) => {
           return (
-            <Item itemObj={item} onDeleteItem={onDeleteItem} key={item.id} />
+            <Item
+              itemObj={item}
+              onDeleteItem={onDeleteItem}
+              onToggleItem={onToggleItem}
+              key={item.id}
+            />
           );
         })}
       </ul>
