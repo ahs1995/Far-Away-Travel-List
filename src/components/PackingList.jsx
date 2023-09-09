@@ -11,6 +11,7 @@ export default function PackingList({
   itemsArray,
   onDeleteItem,
   onToggleItem,
+  onClearList,
 }) {
   const [sortBy, setSortBy] = useState("input");
 
@@ -48,6 +49,7 @@ export default function PackingList({
           <option value="description">Sort by description</option>
           <option value="packed">Sort by packed</option>
         </select>
+        <button onClick={onClearList}>Clear list</button>
       </div>
     </div>
   );
